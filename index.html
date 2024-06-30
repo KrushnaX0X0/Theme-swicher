@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme switcher</title>
+</head>
+<body id="mean-body">
+    <style>
+        h1{
+            text-align: center;
+        }
+        .img{
+            height: 6vh;
+            cursor: pointer;
+        }
+        .icon{
+            position: fixed;
+            right: 5px;
+            top: 5px;
+        }
+        .bg-dark{
+            background-color: black;
+            color: azure;
+        }
+        .bg-light{
+            background-color: cadetblue;
+            color: #333;
+        }
+    </style>
+    <h1>Theme Switcher</h1>
+    <div class="icon">
+        <img src="full-moon.png"   class="img" onclick="enablelight()">
+        <img src="moon.png" alt="" class="img" ondblclick="enabledark()">    
+    </div>
+    <script>
+        function enabledark(){
+        let mainbody = document.getElementById("mean-body")
+        mainbody.classList.remove("bg-light")
+        mainbody.classList.add("bg-dark")
+
+
+
+        }
+        function enablelight(){
+            let mainbody = document.getElementById("mean-body")
+            mainbody.classList.remove("bg-dark")
+            mainbody.classList.add("bg-light")
+
+        }
+
+    </script>
+</body>
+</html>
